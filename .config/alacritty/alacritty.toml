@@ -1,0 +1,32 @@
+[window]
+padding = {x=5, y=5}
+opacity = 0.95
+blur = true
+[colors.normal]
+black   = "#000000"
+red     = "#800000"
+green   = "#07a316"
+yellow  = "#808000"
+blue    = "#3461eb"
+magenta = "#800080"
+cyan    = "#008080"
+white   = "#c0c0c0"
+[colors.bright]
+black   = "#808080"
+red     = "#ff0000"
+green   = "#00ff00"
+yellow  = "#ffff00"
+blue    = "#0000ff"
+magenta = "#ff00ff"
+cyan    = "#00ffff"
+white   = "#ffffff"
+[colors.dim]
+black   = "#000000"
+red     = "#5f0000"
+green   = "#005f00"
+yellow  = "#5f5f00"
+blue    = "#00005f"
+magenta = "#5f005f"
+cyan    = "#005f5f"
+white   = "#8a8a8a"
+

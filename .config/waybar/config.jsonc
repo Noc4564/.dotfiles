@@ -1,0 +1,62 @@
+{
+  // positioining
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory","pulseaudio", "battery", "power-profiles-daemon", "tray"],
+
+  // formats
+  // clock format
+  "clock": {
+    "format": "{:%Y-%m-%d %I:%M %p}"
+  },
+
+  // cpu format
+  "cpu": {
+    "format": "{usage}%"
+  },
+
+  // memory format
+  "memory": {
+    "format": "{used:0.1f}G"
+  },
+
+  // battery format
+  "battery": {
+    "format": "{icon}{capacity}%",
+    "format-icons": {
+      "default": ["", "", "", "", ""],
+      "charging": ["󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋"],
+      // "plugged": ["", "", "", "", ""],
+      "full": ["󰁹"]
+    },
+    "states": {
+      "warning": 20
+    },
+    "format-warning": "󱃌"
+  },
+
+  // audio format
+  "pulseaudio": {
+    "format": "{icon}{volume}%",
+    "icon": "",
+    "format-muted": "󰝟{volume}%",
+    "format-icons": {
+      "default": ""
+    }
+  },
+  // power profile
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  }
+
+}
