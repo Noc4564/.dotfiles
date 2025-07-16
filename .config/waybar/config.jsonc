@@ -14,12 +14,18 @@
 
   // cpu format
   "cpu": {
-    "format": "{usage}%"
+    "format": "{icon}{usage}%",
+    "format-icons": {
+      "default": ""
+    }
   },
 
   // memory format
   "memory": {
-    "format": "{used:0.1f}G"
+    "format": "{icon}{used:0.1f}G",
+    "format-icons": {
+      "default": ""
+    }
   },
 
   // battery format
