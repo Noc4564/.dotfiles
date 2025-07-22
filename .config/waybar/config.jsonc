@@ -4,7 +4,7 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["cpu", "memory","pulseaudio", "battery", "power-profiles-daemon", "tray"],
+  "modules-right": ["cpu", "memory", "battery", "group/sliders", "tray", "group/power"],
 
   // formats
   // clock format
@@ -42,17 +42,47 @@
     },
     "format-warning": "󱃌"
   },
-
   // audio format
-  "pulseaudio": {
-    "format": "{icon}{volume}%",
-    "icon": "",
-    "format-muted": "󰝟{volume}%",
+
+  // power profile
+//  "power-profiles-daemon": {
+//    "format": "{icon}",
+//    "tooltip-format": "Power profile: {profile}",
+//    "tooltip": true,
+//    "format-icons": {
+//      "default": "",
+//      "performance": "",
+//      "balanced": "",
+//      "power-saver": ""
+//    }
+//  },
+  // power menu
+  "group/power": {
+    "modules": [
+      "custom/power",
+      "power-profiles-daemon"
+    ]
+  },
+  "custom/power": {
+    "on-click": "~/.config/scripts/waybar/powermenu.sh",
+    "format": "{icon}",
     "format-icons": {
-      "default": ""
+      "default": "󰐦"
     }
   },
-  // power profile
+  "group/sliders": {
+    "drawer": {
+      "transition-duration": 200,
+      "children-class": "system-menu-items"
+    },
+    "orientation": "horizontal",
+    "modules": [
+      "backlight",
+      "backlight/slider",
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  },
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}",
@@ -63,6 +93,27 @@
       "balanced": "",
       "power-saver": ""
     }
+  },
+  "backlight": {
+    "format": "{icon}{percent}%",
+    "format-icons": "󰃟"
+  },
+  "backlight/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  },
+  "pulseaudio": {
+    "format": "{icon}{volume}%",
+    "icon": "",
+    "format-muted": "󰝟{volume}%",
+    "format-icons": {
+      "default": ""
+    }
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
   }
-
 }

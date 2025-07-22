@@ -33,3 +33,9 @@ window#waybar {
   padding: 0 10px;
 }
 
+#backlight-slider {
+  min-width: 100px;
+}
+#pulseaudio-slider {
+  min-width: 100px;
+}
