@@ -3,7 +3,7 @@
 set -e
 
 DISPLAY_NAMES=(Lock Logout Shutdown Restart Shutdown)
-COMMANDS=('loginctl lock-session' 'hyprctl dispatch exit' 'systemctl poweroff' 'systemctl reboot' 'systemctl suspend')
+COMMANDS=('${HOME}/.config/swaylock/lock.sh' 'hyprctl dispatch exit' 'systemctl poweroff' 'systemctl reboot' 'systemctl suspend')
 ICON_PATHS=(
    # Lock
   󰍃 # Logout
