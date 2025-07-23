@@ -2,7 +2,7 @@
 
 set -e
 
-DISPLAY_NAMES=(Lock Logout Shutdown Restart Shutdown)
+DISPLAY_NAMES=(Lock Logout Shutdown Restart Sleep)
 COMMANDS=('${HOME}/.config/swaylock/lock.sh' 'hyprctl dispatch exit' 'systemctl poweroff' 'systemctl reboot' 'systemctl suspend')
 ICON_PATHS=(
    # Lock
@@ -14,7 +14,7 @@ ICON_PATHS=(
 
 MENU_ITEMS=()
 for i in "${!DISPLAY_NAMES[@]}"; do
-  MENU_ITEMS+=("img:${ICON_PATHS[i]}:text:${DISPLAY_NAMES[i]}")
+  MENU_ITEMS+=("${ICON_PATHS[i]}:${DISPLAY_NAMES[i]}")
 done
 
 CHOICE=$(printf '%s\n' "${MENU_ITEMS[@]}" | wofi --show dmenu)
