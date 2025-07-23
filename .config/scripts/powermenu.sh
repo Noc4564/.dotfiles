@@ -1,12 +1,13 @@
 #!/bin/bash
 
+# This script is a modified version of this script: https://github.com/acarl005/dotfiles/blob/master/waybar/scripts/power-menu.sh
+
 set -e
 
-DISPLAY_NAMES=(Lock Logout Shutdown Restart Sleep)
-COMMANDS=('${HOME}/.config/swaylock/lock.sh' 'hyprctl dispatch exit' 'systemctl poweroff' 'systemctl reboot' 'systemctl suspend')
+DISPLAY_NAMES=(Lock Shutdown Restart Sleep)
+COMMANDS=('${HOME}/.config/swaylock/lock.sh' 'systemctl poweroff' 'systemctl reboot' 'systemctl suspend')
 ICON_PATHS=(
    # Lock
-  󰍃 # Logout
    # Shutdown
   󰜉 # Restart
   󰒲 # Sleep
@@ -20,7 +21,7 @@ done
 CHOICE=$(printf '%s\n' "${MENU_ITEMS[@]}" | wofi --show dmenu)
 
 # Extract label from `text:...`
-SELECTED_NAME="${CHOICE#*:text:}"
+SELECTED_NAME="${CHOICE#*:}"
 
 # Match selection and run command
 for i in "${!DISPLAY_NAMES[@]}"; do
