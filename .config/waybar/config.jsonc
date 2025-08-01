@@ -40,7 +40,7 @@
     "states": {
       "warning": 20
     },
-    "format-warning": "󱃌"
+    "format-warning": "󱃌{capacity}%"
   },
   // audio format
 

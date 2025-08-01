@@ -27,6 +27,7 @@
 ; (gtk_accel_path "<Actions>/ThunarStandardView/forward" "<Alt>Right")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/restore" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-location-alt" "<Alt>d")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/fc16bb064a47a3de57cfff4298074ca7" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/zoom-out-alt" "<Primary>KP_Subtract")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/select-by-pattern" "<Primary>s")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-file-menu" "F10")
