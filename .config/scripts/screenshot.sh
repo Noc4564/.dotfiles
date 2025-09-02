@@ -16,11 +16,11 @@ CHOICE=$(echo -e "Fullscreen\nRegion\nScreen" | wofi --dmenu --prompt "Screensho
 case "$CHOICE" in
     "Fullscreen")
         # Capture all displays
-        grim "$FILE"
+        sleep 1 && grim "$FILE"
         ;;
     "Region")
         # Select region and capture
-        slurp | grim -g - "$FILE"
+        sleep 1 && slurp | grim -g - "$FILE"
         ;;
 	# Select which screen to capture
     "Screen")
