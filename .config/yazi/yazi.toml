@@ -1,0 +1,16 @@
+[open]
+prepend_rules = [
+	{ url = "*.jpg", use = "openPic" },
+	{ url = "*.png", use = "openPic" },
+	{ url = "*.raw", use = "openPic" },
+	{ url = "*.jpeg", use = "openPic" },
+]
+
+[opener]
+openPic = [
+	{ run = 'imv * -n "$@"', orphan = true, desc = "imv" }
+]
+play = [
+	{ run = 'placeholder "$@"', orphan = true, desc = "Stremio" }
+]
+
