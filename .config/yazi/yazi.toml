@@ -4,11 +4,16 @@ prepend_rules = [
 	{ url = "*.png", use = "openPic" },
 	{ url = "*.raw", use = "openPic" },
 	{ url = "*.jpeg", use = "openPic" },
+	{ mime = "text/*", use = "textEdit" },
+	{ mime = "application/json", use = "textEdit" }
 ]
 
 [opener]
 openPic = [
 	{ run = 'imv * -n "$@"', orphan = true, desc = "imv" }
+]
+textEdit = [
+	{ run = 'nvim "$@"', block = true, desc = "Nvim" }
 ]
 play = [
 	{ run = 'placeholder "$@"', orphan = true, desc = "Stremio" }
