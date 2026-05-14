@@ -8,7 +8,7 @@ DISPLAY_NAMES=(Lock Shutdown Restart Sleep)
 COMMANDS=('${HOME}/.config/swaylock/lock.sh' 'systemctl poweroff' 'systemctl reboot' 'systemctl suspend')
 ICON_PATHS=(
    # Lock
-   # Shutdown
+  󰐥 # Shutdown
   󰜉 # Restart
   󰒲 # Sleep
 )
