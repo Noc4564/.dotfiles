@@ -8,7 +8,8 @@
 
 window#waybar {
   background-color: rgba(0,0,0,0.2);
-  border-bottom: 2px solid #444;
+  border: 2px solid #444;
+  border-radius: 4px;
 }
 
 #workspaces {
@@ -25,14 +26,24 @@ window#waybar {
 #workspaces button {
   padding: 0 4px;
   border-radius: 3px;
-  background-color: rgba(0,0,150,0.5);
+  background-color: rgba(19,67,236,1);
 }
 #workspaces button.active {
-  background-color: rgba(100,150,170,0.5);
+  background-color: rgba(87,173,239,1);
 }
 
 #clock, #cpu, #memory, #battery, #pulseaudio, #tray {
   padding: 0 10px;
+}
+#custom-power, #power-profiles-daemon {
+  margin-right: 4px;
+  padding: 0 2px;
+}
+#custom-power {
+  padding-top: 2px;
+}
+#power-profiles-daemon {
+  padding-bottom: 2px;
 }
 
 #backlight-slider {

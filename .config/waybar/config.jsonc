@@ -2,6 +2,7 @@
   // positioining
   "layer": "top",
   "position": "top",
+  "margin": 5,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": ["cpu", "memory", "battery", "group/sliders", "tray", "group/power"],
