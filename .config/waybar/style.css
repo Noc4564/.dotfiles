@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.2);
   border-bottom: 2px solid #444;
 }
 
@@ -22,11 +22,13 @@ window#waybar {
   color: green;
   font-weight: bolder;
 }
-
 #workspaces button {
   padding: 0 4px;
   border-radius: 3px;
   background-color: rgba(0,0,150,0.5);
+}
+#workspaces button.active {
+  background-color: rgba(100,150,170,0.5);
 }
 
 #clock, #cpu, #memory, #battery, #pulseaudio, #tray {
