@@ -22,8 +22,12 @@ window#waybar {
 #workspaces button {
   padding: 0 4px;
   margin: 0px;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: rgba(19,67,236,1);
+}
+#workspaces button label {
+  font-size: 20px;
+  color: #254503;
 }
 #workspaces button.active {
   padding: 0 7px;
