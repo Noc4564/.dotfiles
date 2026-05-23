@@ -48,8 +48,9 @@ window#waybar {
 }
 #power-profiles-daemon {
   margin-top: 0px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   padding-bottom: 2px;
+  padding-top: 2px;
   border-radius: 0 0 3px 3px;
 }
 
