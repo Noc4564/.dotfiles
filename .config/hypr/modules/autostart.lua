@@ -1,0 +1,8 @@
+hl.on("hyprland.start", function()
+  hl.exec_cmd("waybar")
+  hl.exec_cmd("~/.config/swaylock/swaylock-idle.sh")
+  hl.exec_cmd("~/.config/scripts/setprimary-x-display.sh")
+  hl.exec_cmd("nm-applet")
+  hl.exec_cmd("blueman-applet")
+  hl.exec_cmd("nextcloud")
+end)
