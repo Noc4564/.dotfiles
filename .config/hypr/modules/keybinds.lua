@@ -36,21 +36,3 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/.config/scripts/powermenu.sh"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("~/.config/scripts/screenshot.sh"))
 
--- inputs
-hl.config({
-  input = {
-    kb_layout = "us",
-    kb_variant = "",
-    kb_model = "",
-    kb_options = "compose:ralt",
-    kb_rules = "",
-    follow_mouse = 1,
-    sensitivity = 0,
--- touchpad input handling
-    touchpad = {
-      scroll_factor = 0.3,
-      natural_scroll = true,
-    }
-  }
-})
-

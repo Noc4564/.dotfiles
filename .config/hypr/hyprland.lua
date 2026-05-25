@@ -3,4 +3,5 @@ require("modules.keybinds")
 require("modules.environment")
 require("modules.autostart")
 require("modules.gestures")
+require("modules.inputs")
 
