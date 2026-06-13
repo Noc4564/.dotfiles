@@ -5,7 +5,9 @@ prepend_rules = [
 	{ url = "*.raw", use = "openPic" },
 	{ url = "*.jpeg", use = "openPic" },
 	{ mime = "text/*", use = "textEdit" },
-	{ mime = "application/json", use = "textEdit" }
+	{ mime = "application/json", use = "textEdit" },
+  { url = "*.docx", use = ["onlyoffice", "open"] },
+  { url = "*.doc", use = ["onlyoffice", "open"] }
 ]
 
 [opener]
@@ -14,6 +16,9 @@ openPic = [
 ]
 textEdit = [
 	{ run = 'nvim "$@"', block = true, desc = "Nvim" }
+]
+onlyoffice = [
+  { run = 'onlyoffice-desktopeditors "$@"', orphan = true, desc = "OnlyOffice" },
 ]
 play = [
 	{ run = 'placeholder "$@"', orphan = true, desc = "Stremio" }
